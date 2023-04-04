@@ -1,0 +1,18 @@
+runtime: nodejs18
+
+env_variables:
+  NODE_ENV: production
+
+handlers:
+  - url: /assets
+    static_dir: assets
+
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
+
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
